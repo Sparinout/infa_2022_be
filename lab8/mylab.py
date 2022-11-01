@@ -1,4 +1,5 @@
 import pygame
+from pygame.draw import *
 
 # После импорта библиотеки, необходимо её инициализировать:
 pygame.init()
@@ -16,7 +17,11 @@ pygame.display.update()
 # Наконец, нужно создать основной цикл, в котором будут отслеживаться
 # происходящие события.
 # Пока единственное событие, которое нас интересует - выход из программы.
+
+clock = pygame.time.Clock()
+
 while True:
+    clock.tick(30)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
