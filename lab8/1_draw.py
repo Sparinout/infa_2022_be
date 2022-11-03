@@ -7,7 +7,7 @@ FPS = 30
 screen = pygame.display.set_mode((400, 400))
 
 #фон
-circle(screen, (128, 128, 128), (200, 175), 1250)
+screen.fill("grey")
 
 #тело
 circle(screen, (255, 255, 0), (200, 175), 125)
@@ -23,10 +23,12 @@ circle(screen, (0, 0, 0), (150, 150), 30, 3)
 circle(screen, (0, 0, 0), (150, 150), 15)
 
 #губы
-rect(screen, (0, 0, 0), (140, 230, 120, 25))
+rect(screen, (0, 0, 0), (140, 230, 140, 25))
+#брови
+polygon(screen, (0, 0, 0), [(70,90), (75,50), (180,100), (180,120)])
+polygon(screen, (0, 0, 0), [(310,100), (325,50), (220,100), (220,120)])
 
-polygon(screen, (255, 255, 0), [(100,100), (200,50),
-                               (300,100), (100,100)])
+
 
 pygame.display.update()
 clock = pygame.time.Clock()
