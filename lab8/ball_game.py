@@ -1,7 +1,6 @@
 import pygame
 from pygame.draw import *
 import random
-import sys
 
 pygame.init()
 
