@@ -214,7 +214,7 @@ for i in range(number_of_targets):
 finished = False
 font = pygame.font.SysFont(None, 24)
 dt = 1
-
+name = input("Your name: ")
 
 while not finished:
 
@@ -257,5 +257,8 @@ while not finished:
     gun.power_up()
 
     pygame.display.update()
+
+f = open("text.txt", "a")
+f.writelines(name + ": " + str(temp1) + '\n')
 
 pygame.quit()
